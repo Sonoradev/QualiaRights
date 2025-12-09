@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeriDose — Verified Access to Relief | Certus Medical</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #4DD4C4;
+      --teal-dim: rgba(77, 212, 196, 0.15);
+      --teal-glow: rgba(77, 212, 196, 0.08);
+      --amber: #F4B942;
+      --amber-dim: rgba(244, 185, 66, 0.15);
+      --dark-bg: #0A0C10;
+      --device-bg: #1A1D24;
+      --surface: #232830;
+      --surface-elevated: #2A2F38;
+      --danger: #E85454;
+      --text-primary: #F0F2F5;
+      --text-secondary: #8A919C;
+      --text-dim: #5A6270;
+      --off-white: #F5F7FA;
+      
+      --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-primary);
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 12, 16, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--teal), var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo span {
+      font-weight: 400;
+      opacity: 0.7;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    /* Sections */
+    section {
+      padding: 120px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 { font-weight: 600; line-height: 1.2; }
+
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 24px; }
+    h3 { font-size: 1.5rem; margin-bottom: 16px; }
+
+    p { color: var(--text-secondary); font-size: 1.125rem; }
+    p.lead { font-size: 1.35rem; line-height: 1.5; }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, var(--teal-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 { margin-bottom: 24px; position: relative; }
+
+    .hero .highlight {
+      color: var(--teal);
+    }
+
+    .hero-tagline {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-family: var(--font-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--dark-bg);
+    }
+
+    .btn-primary:hover {
+      background: #5DDDD0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(77, 212, 196, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    /* Problem Section */
+    .problem {
+      background: linear-gradient(180deg, var(--dark-bg) 0%, var(--device-bg) 100%);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    .problem-card {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 40px 32px;
+      border: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+    }
+
+    .problem-card .number {
+      font-family: var(--font-mono);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .problem-card .label {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .problem-card .description {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+    }
+
+    /* Story Section - The Three Elements */
+    .story {
+      background: var(--device-bg);
+    }
+
+    .story-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin: 64px 0;
+      flex-wrap: wrap;
+    }
+
+    .story-element {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      min-width: 200px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .story-element.problem-element { border-color: var(--danger); }
+    .story-element.solution-element { border-color: var(--teal); }
+    .story-element.barrier-element { border-color: var(--amber); }
+
+    .story-element .icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .story-element h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .story-element p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .story-arrow {
+      font-size: 2rem;
+      color: var(--text-dim);
+    }
+
+    .story-explanation {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .story-explanation p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    .story-explanation p + p {
+      margin-top: 24px;
+    }
+
+    /* Solution Section */
+    .solution {
+      background: var(--dark-bg);
+    }
+
+    .solution-quote {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 64px;
+      line-height: 1.4;
+    }
+
+    /* Four Elements */
+    .elements-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .element-card {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 32px 24px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s;
+    }
+
+    .element-card:hover {
+      border-color: var(--teal);
+      transform: translateY(-4px);
+    }
+
+    .element-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--teal-dim);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .element-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .element-card .function {
+      font-size: 0.95rem;
+      color: var(--teal);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .element-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* The Ask Section */
+    .ask {
+      background: linear-gradient(180deg, var(--dark-bg) 0%, var(--device-bg) 50%, var(--dark-bg) 100%);
+    }
+
+    .ask-box {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-elevated) 100%);
+      border: 2px solid var(--teal);
+      border-radius: 24px;
+      padding: 64px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ask-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--teal), var(--amber));
+    }
+
+    .ask-box h2 {
+      font-size: 1.75rem;
+      margin-bottom: 24px;
+    }
+
+    .ask-box p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .ask-box .tagline {
+      font-size: 1.1rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-top: 32px;
+      font-family: var(--font-mono);
+    }
+
+    /* Patient Ownership Section */
+    .ownership {
+      background: var(--dark-bg);
+    }
+
+    .ownership-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .ownership-text h2 {
+      margin-bottom: 24px;
+    }
+
+    .ownership-text p {
+      margin-bottom: 24px;
+    }
+
+    .ownership-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--surface);
+      padding: 20px 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--teal-dim);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--teal);
+    }
+
+    .benefit-item h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+
+    .benefit-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Mexico Pilot Section */
+    .pilot {
+      background: var(--device-bg);
+    }
+
+    .pilot-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .pilot-phases {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .phase-card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 28px;
+      border-left: 4px solid var(--teal);
+    }
+
+    .phase-card .phase-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .phase-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .phase-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* IP Licensing Section */
+    .licensing {
+      background: var(--dark-bg);
+    }
+
+    .licensing-intro {
+      max-width: 800px;
+      margin-bottom: 64px;
+    }
+
+    .licensing-intro .callout {
+      background: var(--surface);
+      border-left: 4px solid var(--teal);
+      padding: 24px 32px;
+      margin-top: 32px;
+      font-size: 1.1rem;
+      color: var(--teal);
+      font-weight: 500;
+    }
+
+    /* IP Combination Visualizer */
+    .ip-visualizer {
+      margin-bottom: 64px;
+    }
+
+    .ip-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .ip-tab {
+      padding: 12px 24px;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .ip-tab:hover, .ip-tab.active {
+      background: var(--teal);
+      color: var(--dark-bg);
+      border-color: var(--teal);
+    }
+
+    .ip-content {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .ip-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .ip-table th, .ip-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .ip-table th {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(77, 212, 196, 0.05);
+    }
+
+    .ip-table th:first-child { border-radius: 8px 0 0 8px; }
+    .ip-table th:last-child { border-radius: 0 8px 8px 0; }
+
+    .ip-table td {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .ip-table td:first-child {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .ip-table tr:last-child td { border-bottom: none; }
+
+    .element-tags {
+      display: flex;
+      gap: 8px;
+    }
+
+    .element-tag {
+      padding: 4px 12px;
+      background: var(--teal-dim);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--teal);
+      font-family: var(--font-mono);
+    }
+
+    /* Market Applications */
+    .markets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .market-card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: border-color 0.2s;
+    }
+
+    .market-card:hover { border-color: var(--teal-dim); }
+
+    .market-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .market-card .need {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .market-card .offer {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Compound Expansion */
+    .expansion {
+      background: var(--device-bg);
+    }
+
+    .compound-table-container {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 48px;
+      overflow-x: auto;
+    }
+
+    .compound-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .compound-table th, .compound-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .compound-table th {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(77, 212, 196, 0.05);
+    }
+
+    .compound-table td { font-size: 0.95rem; color: var(--text-secondary); }
+    .compound-table td:first-child { color: var(--text-primary); font-weight: 500; }
+    .compound-table tr:last-child td { border-bottom: none; }
+
+    .compound-table tr:first-of-type td {
+      background: rgba(77, 212, 196, 0.05);
+    }
+
+    .priority-high { color: var(--teal); }
+    .priority-medium { color: var(--amber); }
+    .priority-low { color: var(--text-dim); }
+
+    /* Vision Section */
+    .vision {
+      background: linear-gradient(180deg, var(--dark-bg) 0%, var(--device-bg) 100%);
+    }
+
+    .vision-quotes {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .vision-quote {
+      text-align: center;
+    }
+
+    .vision-quote blockquote {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .vision-quote cite {
+      font-size: 0.9rem;
+      color: var(--teal);
+      font-style: normal;
+    }
+
+    /* Future Section */
+    .future {
+      background: var(--device-bg);
+    }
+
+    .future-timeline {
+      display: flex;
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    .timeline-phase {
+      flex: 1;
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 32px;
+      border-top: 4px solid var(--teal);
+      position: relative;
+    }
+
+    .timeline-phase.future-phase { border-top-color: var(--amber); }
+
+    .timeline-phase h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+
+    .timeline-phase.future-phase h4 { color: var(--amber); }
+
+    .timeline-phase h3 {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .timeline-list {
+      list-style: none;
+    }
+
+    .timeline-list li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding: 8px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .timeline-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .timeline-phase.future-phase .timeline-list li::before {
+      background: var(--amber);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-bg);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 64px 40px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--teal), var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer-text {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--teal); }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .problem-grid,
+      .elements-grid { grid-template-columns: repeat(2, 1fr); }
+      .markets-grid { grid-template-columns: repeat(2, 1fr); }
+      .ownership-content,
+      .pilot-content { grid-template-columns: 1fr; }
+      .future-timeline { flex-direction: column; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 80px 24px; }
+      .nav-links { display: none; }
+      .problem-grid,
+      .elements-grid,
+      .markets-grid { grid-template-columns: 1fr; }
+      .story-flow { flex-direction: column; }
+      .story-arrow { transform: rotate(90deg); }
+      .ask-box { padding: 40px 24px; }
+      .ip-tabs { overflow-x: auto; flex-wrap: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">VeriDose <span>by Certus Medical</span></div>
+      <ul class="nav-links">
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#solution">The Solution</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#licensing">Platform</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="VeriDose_UI_Library.html" style="color: var(--amber);">UI Wireframes →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="section-label">Certus Medical</div>
+    <h1>We made it possible for the government to <span class="highlight">trust patients</span> with medicines they couldn't trust them with before.</h1>
+    <p class="hero-tagline">If a patient proves who they are, proves the medicine is pure, and records every outcome—what justification is left to deny them relief?</p>
+    <div class="cta-group">
+      <a href="#solution" class="btn btn-primary">See How It Works</a>
+      <a href="#vision" class="btn btn-secondary">Our Vision</a>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problem" id="problem">
+    <div class="section-label">The Suffering</div>
+    <h2>There's a type of headache so painful that doctors call them "suicide headaches."</h2>
+    <p class="lead">People who get them say it feels like a hot poker being pushed through their eye, over and over. Some people get these attacks every day. Some get them several times a day. The regular medicines don't work.</p>
+    
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="number">500K</div>
+        <div class="label">Americans affected</div>
+        <div class="description">Cluster headaches affect approximately 0.1% of the population</div>
+      </div>
+      <div class="problem-card">
+        <div class="number">20×</div>
+        <div class="label">Suicide risk</div>
+        <div class="description">Patients face dramatically elevated risk due to unbearable pain</div>
+      </div>
+      <div class="problem-card">
+        <div class="number">~20%</div>
+        <div class="label">Treatment-resistant</div>
+        <div class="description">Standard treatments fail for one in five patients</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story">
+    <div class="section-label">The Irreducible Problem</div>
+    <h2>Three elements. One barrier.</h2>
+    
+    <div class="story-flow">
+      <div class="story-element problem-element">
+        <div class="icon">😔</div>
+        <h4>A Person in Extreme Pain</h4>
+        <p>Cluster headache patient</p>
+      </div>
+      <div class="story-arrow">→</div>
+      <div class="story-element solution-element">
+        <div class="icon">💊</div>
+        <h4>A Medicine That Helps</h4>
+        <p>N,N-DMT stops attacks in minutes</p>
+      </div>
+      <div class="story-arrow">→</div>
+      <div class="story-element barrier-element">
+        <div class="icon">🚫</div>
+        <h4>A Barrier Preventing Access</h4>
+        <p>Regulatory prohibition</p>
+      </div>
+    </div>
+
+    <div class="story-explanation">
+      <p>There's a medicine that can stop these headaches in minutes. It's been used safely by humans for thousands of years. But the government put it on a list of illegal drugs because some people use it to get high.</p>
+      <p>So the people with these terrible headaches can't have it—even though it could help them.</p>
+      <p>The government's worry is reasonable: they don't know who's using it, whether the medicine is real, or what happens when people take it. <strong style="color: var(--teal);">They can't see it, so they can't trust it.</strong></p>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="solution" id="solution">
+    <div class="section-label">The Solution</div>
+    <p class="solution-quote">"We built a system that lets them see everything."</p>
+    
+    <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 48px;">It confirms who the person is. It confirms the medicine is real and tested. It records every single use—when, how much, what happened. It's like saying to the government: <em>"You were worried you couldn't trust this. Here's proof you can."</em></p>
+  </section>
+
+  <!-- Four Elements Section -->
+  <section id="how" style="background: var(--device-bg);">
+    <div class="section-label">The Four Elements</div>
+    <h2>Everything verified. Nothing hidden.</h2>
+    <p class="lead">VeriDose enables Licensed Autonomous Access through four essential verification elements.</p>
+
+    <div class="elements-grid">
+      <div class="element-card">
+        <div class="element-icon">👤</div>
+        <h4>Identity</h4>
+        <div class="function">Who is authorized</div>
+        <p>Verified patient identity creates an accountability trail. We know exactly who is using the medicine.</p>
+      </div>
+      <div class="element-card">
+        <div class="element-icon">💎</div>
+        <h4>Medicine</h4>
+        <div class="function">What is administered</div>
+        <p>Authenticated pharmaceutical-grade compounds with chain of custody. Every cartridge tracked and verified.</p>
+      </div>
+      <div class="element-card">
+        <div class="element-icon">📋</div>
+        <h4>Protocol</h4>
+        <div class="function">How it's administered</div>
+        <p>Standardized dosing methodology. Consistent temperature, timing, and technique across every administration.</p>
+      </div>
+      <div class="element-card">
+        <div class="element-icon">📊</div>
+        <h4>Evidence</h4>
+        <div class="function">What happened</div>
+        <p>Real-world outcomes recorded for every session. Individual data contributing to collective medical knowledge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Ask Section -->
+  <section class="ask">
+    <div class="ask-box">
+      <div class="section-label">The Ask</div>
+      <h2>One device. One molecule. One condition. One new category.</h2>
+      <p>We're not asking to break the rules. We're asking for a new rule: If someone can prove who they are, prove the medicine is safe, and show you exactly what happens—shouldn't they be allowed to stop suffering?</p>
+      <p class="tagline">Every patient verified. Every cartridge authenticated. Every dose tracked. Every outcome recorded.</p>
+    </div>
+  </section>
+
+  <!-- Patient Ownership Section -->
+  <section class="ownership" id="ownership">
+    <div class="ownership-content">
+      <div class="ownership-text">
+        <div class="section-label">Patient Co-Ownership</div>
+        <h2>The people who suffer most own the solution.</h2>
+        <p class="lead">The people with the most at stake in VeriDose's success are the patients themselves. They experience the suffering. They understand the urgency. They have the most authentic voice.</p>
+        <p>Making patients owners transforms the company from "a business trying to sell a product" to "patients building a solution for themselves."</p>
+        <p style="color: var(--teal); font-weight: 500; margin-top: 24px;">A company that is genuinely impossible to characterize as profiteering from suffering.</p>
+      </div>
+      <div class="ownership-benefits">
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>
+            <h4>Authentic Advocacy</h4>
+            <p>Patient-owners speak from genuine stake, not compensation</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>
+            <h4>Aligned Incentives</h4>
+            <p>Patients benefit directly from company success</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>
+            <h4>Political Leverage</h4>
+            <p>Organized patient-owners exceed lobbying power of any company</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div>
+            <h4>Community Creation</h4>
+            <p>Ownership creates mutual support network beyond the product</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mexico Pilot Section -->
+  <section class="pilot" id="pilot">
+    <div class="pilot-content">
+      <div>
+        <div class="section-label">Evidence First</div>
+        <h2>The medicine is legal in Mexico. So we start there.</h2>
+        <p class="lead" style="margin-bottom: 24px;">We're helping people there first, proving it works, and using that proof to change the law here.</p>
+        <p style="margin-bottom: 24px;">Rather than waiting years for US regulatory approval before generating evidence, we'll operate in a jurisdiction where it's legal—generating undeniable proof of concept.</p>
+        <p style="color: var(--teal); font-weight: 500;">Evidence ends debates. Advocacy doesn't.</p>
+      </div>
+      <div class="pilot-phases">
+        <div class="phase-card">
+          <div class="phase-label">Phase 1: Months 1-6</div>
+          <h4>Partnership & Setup</h4>
+          <p>Establish Mexican medical partnerships, legal entity, and deploy VeriDose verification infrastructure.</p>
+        </div>
+        <div class="phase-card">
+          <div class="phase-label">Phase 2: Months 7-18</div>
+          <h4>Controlled Pilot</h4>
+          <p>Treat initial cohort of 50-100 patients with full verification protocol. Rigorous data collection meeting FDA evidence standards.</p>
+        </div>
+        <div class="phase-card">
+          <div class="phase-label">Phase 3: Months 18-36</div>
+          <h4>Scale & Publish</h4>
+          <p>Expand patient population, publish in peer-reviewed journals, present at medical conferences. Use evidence to support US regulatory applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IP Licensing Section -->
+  <section class="licensing" id="licensing">
+    <div class="section-label">Platform Architecture</div>
+    <h2>The four elements combine into licensable value.</h2>
+    
+    <div class="licensing-intro">
+      <p class="lead">The verification architecture isn't just for cluster headaches. Each element—and each combination—represents licensable intellectual property for different applications.</p>
+      <div class="callout">We don't certify compliance. We license the infrastructure that makes compliance possible.</div>
+    </div>
+
+    <div class="ip-visualizer">
+      <div class="ip-tabs">
+        <button class="ip-tab active" onclick="showIP('single')">Single Elements</button>
+        <button class="ip-tab" onclick="showIP('pairs')">Two-Element Pairs</button>
+        <button class="ip-tab" onclick="showIP('triads')">Three-Element Triads</button>
+        <button class="ip-tab" onclick="showIP('full')">Full Stack</button>
+      </div>
+
+      <div class="ip-content" id="ip-single">
+        <table class="ip-table">
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Licensable Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="element-tag">Identity</span></td>
+              <td>Verified patient registry infrastructure for any controlled substance access</td>
+            </tr>
+            <tr>
+              <td><span class="element-tag">Medicine</span></td>
+              <td>Authenticated compound tracking system (adaptable to any scheduled drug)</td>
+            </tr>
+            <tr>
+              <td><span class="element-tag">Protocol</span></td>
+              <td>Dosing methodology IP (patentable treatment protocols)</td>
+            </tr>
+            <tr>
+              <td><span class="element-tag">Evidence</span></td>
+              <td>Real-world outcomes database architecture (licensable to researchers, pharma)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ip-content" id="ip-pairs" style="display: none;">
+        <table class="ip-table">
+          <thead>
+            <tr>
+              <th>Combination</th>
+              <th>Licensable Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Identity</span><span class="element-tag">Medicine</span></div></td>
+              <td>Chain-of-custody compliance system for DEA requirements</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Identity</span><span class="element-tag">Protocol</span></div></td>
+              <td>Personalized treatment protocol engine</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Identity</span><span class="element-tag">Evidence</span></div></td>
+              <td>N-of-1 trial infrastructure for longitudinal patient tracking</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Medicine</span><span class="element-tag">Protocol</span></div></td>
+              <td>Compound-specific administration standards</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Medicine</span><span class="element-tag">Evidence</span></div></td>
+              <td>Batch-to-outcome correlation database</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Protocol</span><span class="element-tag">Evidence</span></div></td>
+              <td>Protocol optimization engine (which dosing patterns perform best)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ip-content" id="ip-triads" style="display: none;">
+        <table class="ip-table">
+          <thead>
+            <tr>
+              <th>Combination</th>
+              <th>Licensable Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Identity</span><span class="element-tag">Medicine</span><span class="element-tag">Protocol</span></div></td>
+              <td>Licensed Autonomous User system — the core regulatory platform</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Identity</span><span class="element-tag">Medicine</span><span class="element-tag">Evidence</span></div></td>
+              <td>Regulatory submission evidence package system</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Identity</span><span class="element-tag">Protocol</span><span class="element-tag">Evidence</span></div></td>
+              <td>Adaptive personalized medicine engine</td>
+            </tr>
+            <tr>
+              <td><div class="element-tags"><span class="element-tag">Medicine</span><span class="element-tag">Protocol</span><span class="element-tag">Evidence</span></div></td>
+              <td>Provider-licensable treatment protocol system</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ip-content" id="ip-full" style="display: none;">
+        <div style="text-align: center; padding: 40px 20px;">
+          <div class="element-tags" style="justify-content: center; margin-bottom: 24px;">
+            <span class="element-tag">Identity</span>
+            <span class="element-tag">Medicine</span>
+            <span class="element-tag">Protocol</span>
+            <span class="element-tag">Evidence</span>
+          </div>
+          <h3 style="color: var(--text-primary); margin-bottom: 16px;">The Complete Verification Platform</h3>
+          <p style="max-width: 600px; margin: 0 auto;">Every administration verified across all dimensions. Maximum-value configuration licensable to pharmaceutical companies, research institutions, state programs, and international healthcare systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Applications -->
+    <h3 style="margin-bottom: 32px;">Market Applications</h3>
+    <div class="markets-grid">
+      <div class="market-card">
+        <h4>Pharmaceutical Companies</h4>
+        <p class="need">Need: Real-world evidence for compounds in development</p>
+        <p class="offer">License: Post-market surveillance infrastructure, batch-to-outcome tracking</p>
+      </div>
+      <div class="market-card">
+        <h4>Research Institutions</h4>
+        <p class="need">Need: DEA compliance for Schedule I research</p>
+        <p class="offer">License: Chain of custody systems, standardized protocols</p>
+      </div>
+      <div class="market-card">
+        <h4>State Programs</h4>
+        <p class="need">Need: Tracking for Oregon, Colorado psychedelic programs</p>
+        <p class="offer">License: Compliance tracking, efficacy reporting systems</p>
+      </div>
+      <div class="market-card">
+        <h4>End-of-Life Care</h4>
+        <p class="need">Need: Right-to-Try documentation, hospice integration</p>
+        <p class="offer">License: Terminal patient verification, outcomes documentation</p>
+      </div>
+      <div class="market-card">
+        <h4>Religious Organizations</h4>
+        <p class="need">Need: Documentation for religious freedom claims</p>
+        <p class="offer">License: Verified sincere practice documentation</p>
+      </div>
+      <div class="market-card">
+        <h4>International Markets</h4>
+        <p class="need">Need: Compliance infrastructure for different jurisdictions</p>
+        <p class="offer">License: Modular systems, regulatory consulting</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compound Expansion Section -->
+  <section class="expansion">
+    <div class="section-label">Platform Expansion</div>
+    <h2>Cluster headaches are just the first application.</h2>
+    <p class="lead">The verification architecture extends to multiple compounds and conditions. Strategic prioritization based on protocol specificity and competitive landscape.</p>
+
+    <div class="compound-table-container">
+      <table class="compound-table">
+        <thead>
+          <tr>
+            <th>Compound</th>
+            <th>Primary Indication</th>
+            <th>Protocol Specificity</th>
+            <th>Strategic Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>N,N-DMT</td>
+            <td>Cluster headaches</td>
+            <td class="priority-high">High</td>
+            <td>First-mover advantage, least competition</td>
+          </tr>
+          <tr>
+            <td>5-MeO-DMT</td>
+            <td>Depression, end-of-life</td>
+            <td class="priority-high">High</td>
+            <td>GH Research parallel pathway</td>
+          </tr>
+          <tr>
+            <td>Ibogaine</td>
+            <td>Addiction</td>
+            <td class="priority-high">Very High</td>
+            <td>Underserved market, safety-critical protocols</td>
+          </tr>
+          <tr>
+            <td>Psilocybin</td>
+            <td>Depression, PTSD</td>
+            <td class="priority-medium">Moderate</td>
+            <td>Crowded landscape, state programs</td>
+          </tr>
+          <tr>
+            <td>MDMA</td>
+            <td>PTSD</td>
+            <td class="priority-high">High</td>
+            <td>Post-FDA approval pathway</td>
+          </tr>
+          <tr>
+            <td>Ketamine</td>
+            <td>Depression, pain</td>
+            <td class="priority-low">Lower</td>
+            <td>Existing infrastructure, competitive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section class="vision" id="vision">
+    <div class="section-label">The Vision</div>
+    <h2 style="text-align: center; margin-bottom: 64px;">Beyond cluster headaches.</h2>
+
+    <div class="vision-quotes">
+      <div class="vision-quote">
+        <blockquote>"We're building the operating system for verified access to controlled substances—cluster headaches are just the first app."</blockquote>
+        <cite>The Platform Vision</cite>
+      </div>
+      <div class="vision-quote">
+        <blockquote>"Humanity has mapped the genome, landed on the moon, and split the atom—the next frontier is consciousness, and it's locked behind laws we built the key to."</blockquote>
+        <cite>The Civilizational Vision</cite>
+      </div>
+      <div class="vision-quote">
+        <blockquote>"We believe extreme suffering can be eliminated in our lifetime—and the tools to do it are sitting in Schedule I."</blockquote>
+        <cite>The Moral Vision</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Timeline -->
+  <section class="future">
+    <div class="section-label">Strategic Architecture</div>
+    <h2>The path forward.</h2>
+
+    <div class="future-timeline">
+      <div class="timeline-phase">
+        <h4>Near-Term</h4>
+        <h3>Evidence Generation</h3>
+        <ul class="timeline-list">
+          <li>Mexico pilot: Establish operations, treat patients</li>
+          <li>Single indication: Cluster headaches</li>
+          <li>Single molecule: N,N-DMT</li>
+          <li>Patient co-ownership structure</li>
+          <li>One regulatory ask: Licensed Autonomous User</li>
+        </ul>
+      </div>
+      <div class="timeline-phase">
+        <h4>Mid-Term</h4>
+        <h3>Platform Expansion</h3>
+        <ul class="timeline-list">
+          <li>US regulatory submission with Mexico evidence</li>
+          <li>Three-tier progression: Supervised → Guided → Autonomous</li>
+          <li>Therapeutic expansion to other tryptamines</li>
+          <li>State program integration (Oregon, Colorado)</li>
+          <li>IP licensing to pharmaceutical companies</li>
+        </ul>
+      </div>
+      <div class="timeline-phase future-phase">
+        <h4>Long-Term</h4>
+        <h3>Full Vision</h3>
+        <ul class="timeline-list">
+          <li>Sovereign tier for spiritual/religious use</li>
+          <li>Multi-compound platform</li>
+          <li>International market expansion</li>
+          <li>Consciousness rights alignment (QRI)</li>
+          <li>Broad IP licensing ecosystem</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Device Showcase Section -->
+  <section id="device" style="background: linear-gradient(180deg, var(--device-bg) 0%, var(--dark-bg) 100%);">
+    <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+      <div class="section-label">The Device</div>
+      <h2 style="margin-bottom: 24px;">See the interface in action.</h2>
+      <p class="lead" style="margin-bottom: 48px;">40 sections, 150+ screens covering authentication, dosing, pain assessment, telehealth, analytics, and more—designed for elderly accessibility during severe pain episodes.</p>
+      
+      <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 48px;">
+        <!-- Device mockup preview -->
+        <div style="width: 220px; height: 333px; background: var(--device-bg); border-radius: 28px; padding: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3), 0 10px 40px rgba(0,0,0,0.4);">
+          <div style="width: 100%; height: 100%; background: var(--dark-bg); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 16px;">👆</div>
+            <div style="font-size: 1.1rem; font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">Touch to Unlock</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary);">Place finger on sensor</div>
+          </div>
+        </div>
+        
+        <div style="width: 220px; height: 333px; background: var(--device-bg); border-radius: 28px; padding: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3), 0 10px 40px rgba(0,0,0,0.4);">
+          <div style="width: 100%; height: 100%; background: var(--dark-bg); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+            <div style="width: 80px; height: 80px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; box-shadow: 0 0 30px rgba(77, 212, 196, 0.3);">
+              <span style="font-size: 2.5rem; color: var(--dark-bg);">✓</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 500; color: var(--teal); margin-bottom: 4px;">Identity Verified</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary);">Welcome back, Andres</div>
+          </div>
+        </div>
+        
+        <div style="width: 220px; height: 333px; background: var(--device-bg); border-radius: 28px; padding: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3), 0 10px 40px rgba(0,0,0,0.4);">
+          <div style="width: 100%; height: 100%; background: var(--dark-bg); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+            <div style="font-size: 2.5rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--teal); margin-bottom: 4px;">260°C</div>
+            <div style="font-size: 1.1rem; font-weight: 500; color: var(--teal); margin-bottom: 8px;">Ready</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px;">Optimal temperature</div>
+            <div style="background: var(--teal); color: var(--dark-bg); padding: 10px 24px; border-radius: 10px; font-weight: 600; font-size: 0.9rem;">Start Session</div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="VeriDose_UI_Library.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
+        View All 150+ UI Wireframes →
+      </a>
+      <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-dim);">Complete device interface library with authentication, dosing, assessment, analytics, telehealth, and more</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <div class="footer-logo">VeriDose</div>
+        <p class="footer-text">Certus Medical — Verification Enables Autonomy</p>
+      </div>
+      <div class="footer-links">
+        <a href="#problem">The Problem</a>
+        <a href="#solution">The Solution</a>
+        <a href="#licensing">Platform</a>
+        <a href="#vision">Vision</a>
+        <a href="VeriDose_UI_Library.html" style="color: var(--amber);">UI Wireframes</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // IP Tab switching
+    function showIP(type) {
+      // Hide all
+      document.querySelectorAll('.ip-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.ip-tab').forEach(el => el.classList.remove('active'));
+      
+      // Show selected
+      document.getElementById('ip-' + type).style.display = 'block';
+      event.target.classList.add('active');
+    }
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Nav background on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(10, 12, 16, 0.95)';
+      } else {
+        nav.style.background = 'rgba(10, 12, 16, 0.9)';
+      }
+    });
+  </script>
+
+</body>
+</html>
