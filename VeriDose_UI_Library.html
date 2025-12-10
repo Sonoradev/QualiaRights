@@ -915,19 +915,19 @@
 <body>
   <!-- Navigation -->
   <nav class="site-nav">
-    <a href="VeriDose_Website_Strategic.html" class="logo">VeriDose</a>
+    <a href="https://qualiarights.com" class="logo">VeriDose</a>
     <ul class="nav-links">
-      <li><a href="VeriDose_Website_Strategic.html">Strategy</a></li>
+      <li><a href="https://qualiarights.com">Strategy</a></li>
       <li><a href="#" class="active">UI Wireframes</a></li>
     </ul>
-    <a href="VeriDose_Website_Strategic.html" class="back-btn">← Back to Strategy</a>
+    <a href="https://qualiarights.com" class="back-btn">← Back to Strategy</a>
   </nav>
 
   <!-- Section quick nav -->
   <div class="section-nav">
     <a href="#section-1">1. Auth</a>
     <a href="#section-2">2. Session</a>
-    <a href="#section-3">3. Pain</a>
+    <a href="#section-3">3. Multidimensional Pain Assessment</a>
     <a href="#section-4">4. Admin</a>
     <a href="#section-5">5. History</a>
     <a href="#section-6">6. Alerts</a>
@@ -943,7 +943,6 @@
     <a href="#section-16">16. Trials</a>
     <a href="#section-17">17. Research</a>
     <a href="#section-18">18. Addiction</a>
-    <a href="#section-19">19. Multi-Assess</a>
     <a href="#section-20">20. Accessibility</a>
     <a href="#section-21">21. State Programs</a>
     <a href="#section-22">22. Autonomy Tiers</a>
@@ -1231,16 +1230,16 @@
     </div>
   </section>
 
-  </section><section id="section-3"><!-- SECTION 3: PAIN ASSESSMENT -->
+  </section><section id="section-3"><!-- SECTION 3: MULTIDIMENSIONAL PAIN ASSESSMENT -->
   <section class="screen-section">
-    <h2 class="section-title">3. Pain Assessment Variants</h2>
-    <p class="section-description">Multiple input methods: discrete slider, faces scale, exponential curve visualization, and 3×3 vertex grid.</p>
+    <h2 class="section-title">3. Multidimensional Pain Assessment</h2>
+    <p class="section-description">Comprehensive pain characterization: intensity scales with exponential suffering curve, location mapping, quality descriptors, valence triangle, temporal patterns, and functional impact.</p>
     
     <div class="screen-grid">
-      <!-- 09: Discrete Slider Severe -->
+      <!-- 09c: Exponential Curve Slider Severe -->
       <div class="screen-item">
         <div class="device-frame">
-          <div class="screen-number">09</div>
+          <div class="screen-number">09c</div>
           <div class="device-screen">
             <div class="status-bar">
               <span class="time">9:41</span>
@@ -1251,9 +1250,25 @@
               </div>
             </div>
             <div class="screen-content assessment-content">
-              <div class="assessment-header"><div class="title">Pain Level</div></div>
-              <div class="slider-container">
-                <div class="discrete-slider">
+              <div class="assessment-header" style="padding: 2px 0 4px;"><div class="title">Pain Level</div></div>
+              <div class="slider-container" style="padding: 8px 10px;">
+                <!-- Exponential curve visualization -->
+                <div style="height: 40px; position: relative; margin-bottom: 4px;">
+                  <svg viewBox="0 0 100 35" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                    <defs>
+                      <linearGradient id="curveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#4DD4C4;stop-opacity:0.3"/>
+                        <stop offset="60%" style="stop-color:#F4B942;stop-opacity:0.4"/>
+                        <stop offset="100%" style="stop-color:#E85454;stop-opacity:0.6"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,35 Q20,34 40,31 Q60,25 80,14 Q95,4 100,0 L100,35 Z" fill="url(#curveGradient1)"/>
+                    <path d="M0,35 Q20,34 40,31 Q60,25 80,14 Q95,4 100,0" fill="none" stroke="var(--text-secondary)" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="73" cy="14" r="3.5" fill="var(--danger)" stroke="var(--dark-bg)" stroke-width="1.5"/>
+                  </svg>
+                  <div style="position: absolute; top: 0; right: 2px; font-size: 0.45rem; color: var(--text-dim);">Suffering</div>
+                </div>
+                <div class="discrete-slider" style="height: 40px;">
                   <div class="slider-track"></div>
                   <div class="slider-notches">
                     <div class="notch"><div class="notch-dot"></div></div>
@@ -1270,67 +1285,17 @@
                   </div>
                   <div class="slider-thumb" style="left: 73%;"></div>
                 </div>
-                <div class="slider-labels"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display"><span class="number" style="color: var(--danger)">8</span><span class="max">/10</span><div class="descriptor">Severe Pain</div></div>
+                <div class="slider-labels" style="margin-bottom: 4px;"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
+                <div class="slider-value-display" style="margin-top: 2px;"><span class="number" style="color: var(--danger); font-size: var(--fs-lg);">8</span><span class="max" style="font-size: var(--fs-base);">/10</span><div class="descriptor">Severe Pain</div></div>
               </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 6px;"><button class="btn btn-primary">Confirm</button></div>
-            </div>
+              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center; margin-top: 4px;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
+              <div style="margin-top: auto; padding-top: 4px;"><button class="btn btn-primary">Start Session</button></div>
+      </div>
           </div>
         </div>
-        <span class="screen-label">09. Pain Slider — Severe</span>
+        <span class="screen-label">09c. Exponential Curve — Severe</span>
       </div>
 
-      <!-- 09b: Faces + Slider Severe -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">09b</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content assessment-content">
-              <div class="assessment-header"><div class="title">Pain Level</div></div>
-              <div class="slider-container" style="padding: 8px 10px;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 6px; width: 100%; overflow: hidden;">
-                  <span style="font-size: 0.9rem;">😊</span>
-                  <span style="font-size: 0.9rem;">🙂</span>
-                  <span style="font-size: 0.9rem;">😐</span>
-                  <span style="font-size: 0.9rem;">😟</span>
-                  <span style="font-size: 0.9rem; filter: grayscale(0); padding: 2px 4px; background: var(--danger-dim); border-radius: 6px;">😣</span>
-                </div>
-                <div class="discrete-slider">
-                  <div class="slider-track"></div>
-                  <div class="slider-notches">
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                  </div>
-                  <div class="slider-thumb" style="left: 73%;"></div>
-                </div>
-                <div class="slider-labels"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display"><span class="number" style="color: var(--danger)">8</span><span class="max">/10</span><div class="descriptor">Severe Pain</div></div>
-              </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 6px;"><button class="btn btn-primary">Start Session</button></div>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">09b. Faces + Slider — Severe</span>
-      </div>
 
       <!-- 10: 3x3 Grid with Vertices and Gradient -->
       <div class="screen-item">
@@ -1391,50 +1356,6 @@
         <span class="screen-label">10. Pain Grid — 3×3 Gradient</span>
       </div>
 
-      <!-- 11: Slider Mild -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">11</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content assessment-content">
-              <div class="assessment-header"><div class="title">Pain Level</div></div>
-              <div class="slider-container">
-                <div class="discrete-slider">
-                  <div class="slider-track"></div>
-                  <div class="slider-notches">
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                  </div>
-                  <div class="slider-thumb" style="left: 27%;"></div>
-                </div>
-                <div class="slider-labels"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display"><span class="number" style="color: var(--teal)">3</span><span class="max">/10</span><div class="descriptor">Mild Pain</div></div>
-              </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 6px;"><button class="btn btn-primary">Start Session</button></div>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">11. Pain Slider — Mild</span>
-      </div>
-
       <!-- 11b: Faces + Slider Mild -->
       <div class="screen-item">
         <div class="device-frame">
@@ -1486,66 +1407,12 @@
         <span class="screen-label">11b. Faces + Slider — Mild</span>
       </div>
 
-      <!-- 09c: Exponential Curve Slider Severe -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">09c</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content assessment-content">
-              <div class="assessment-header" style="padding: 2px 0 4px;"><div class="title">Pain Level</div></div>
-              <div class="slider-container" style="padding: 8px 10px;">
-                <!-- Exponential curve visualization -->
-                <div style="height: 40px; position: relative; margin-bottom: 4px;">
-                  <svg viewBox="0 0 100 35" preserveAspectRatio="none" style="width: 100%; height: 100%;">
-                    <defs>
-                      <linearGradient id="curveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#4DD4C4;stop-opacity:0.3"/>
-                        <stop offset="60%" style="stop-color:#F4B942;stop-opacity:0.4"/>
-                        <stop offset="100%" style="stop-color:#E85454;stop-opacity:0.6"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M0,35 Q20,34 40,31 Q60,25 80,14 Q95,4 100,0 L100,35 Z" fill="url(#curveGradient1)"/>
-                    <path d="M0,35 Q20,34 40,31 Q60,25 80,14 Q95,4 100,0" fill="none" stroke="var(--text-secondary)" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="73" cy="14" r="3.5" fill="var(--danger)" stroke="var(--dark-bg)" stroke-width="1.5"/>
-                  </svg>
-                  <div style="position: absolute; top: 0; right: 2px; font-size: 0.45rem; color: var(--text-dim);">Suffering</div>
-                </div>
-                <div class="discrete-slider" style="height: 40px;">
-                  <div class="slider-track"></div>
-                  <div class="slider-notches">
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                  </div>
-                  <div class="slider-thumb" style="left: 73%;"></div>
-                </div>
-                <div class="slider-labels" style="margin-bottom: 4px;"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display" style="margin-top: 2px;"><span class="number" style="color: var(--danger); font-size: var(--fs-lg);">8</span><span class="max" style="font-size: var(--fs-base);">/10</span><div class="descriptor">Severe Pain</div></div>
-              </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center; margin-top: 4px;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 4px;"><button class="btn btn-primary">Start Session</button></div>
-      </div>
 
-      <!-- 09d: Faces + Exponential Curve Severe -->
+
+      <!-- 63: Pain Location Body Map -->
       <div class="screen-item">
         <div class="device-frame">
-          <div class="screen-number">09d</div>
+          <div class="screen-number">63</div>
           <div class="device-screen">
             <div class="status-bar">
               <span class="time">9:41</span>
@@ -1555,62 +1422,42 @@
                 <div class="battery-icon"><div class="battery-fill"></div></div>
               </div>
             </div>
-            <div class="screen-content assessment-content">
-              <div class="assessment-header" style="padding: 2px 0 4px;"><div class="title">Pain Level</div></div>
-              <div class="slider-container" style="padding: 6px 10px 8px;">
-                <div class="faces-row" style="justify-content: space-between; margin-bottom: 4px;">
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😊</div>
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">🙂</div>
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😐</div>
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😟</div>
-                  <div class="face-option selected" style="font-size: 1rem; padding: 3px;">😣</div>
-                </div>
-                <div style="height: 32px; position: relative; margin-bottom: 2px;">
-                  <svg viewBox="0 0 100 28" preserveAspectRatio="none" style="width: 100%; height: 100%;">
-                    <defs>
-                      <linearGradient id="curveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#4DD4C4;stop-opacity:0.3"/>
-                        <stop offset="60%" style="stop-color:#F4B942;stop-opacity:0.4"/>
-                        <stop offset="100%" style="stop-color:#E85454;stop-opacity:0.6"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M0,28 Q20,27 40,25 Q60,20 80,11 Q95,3 100,0 L100,28 Z" fill="url(#curveGradient2)"/>
-                    <path d="M0,28 Q20,27 40,25 Q60,20 80,11 Q95,3 100,0" fill="none" stroke="var(--text-secondary)" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="73" cy="11" r="3" fill="var(--danger)" stroke="var(--dark-bg)" stroke-width="1.5"/>
-                  </svg>
-                </div>
-                <div class="discrete-slider" style="height: 36px;">
-                  <div class="slider-track"></div>
-                  <div class="slider-notches">
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                  </div>
-                  <div class="slider-thumb" style="left: 73%;"></div>
-                </div>
-                <div class="slider-labels" style="margin-bottom: 2px;"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display" style="margin-top: 0;"><span class="number" style="color: var(--danger); font-size: var(--fs-lg);">8</span><span class="max" style="font-size: var(--fs-base);">/10</span><div class="descriptor" style="margin-top: 0;">Severe Pain</div></div>
+            <div class="screen-content" style="padding: 12px 14px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Where is the pain?</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">Tap affected areas on head map</div>
+              <!-- Head map SVG -->
+              <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                <svg viewBox="0 0 100 120" style="width: 140px; height: 160px;">
+                  <!-- Head outline -->
+                  <ellipse cx="50" cy="50" rx="40" ry="45" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
+                  <!-- Zones -->
+                  <circle cx="30" cy="35" r="12" fill="var(--danger)" opacity="0.6" stroke="var(--danger)" stroke-width="2"/>
+                  <circle cx="70" cy="35" r="12" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
+                  <circle cx="50" cy="25" r="10" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
+                  <circle cx="50" cy="55" r="10" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
+                  <circle cx="30" cy="60" r="8" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
+                  <circle cx="70" cy="60" r="8" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
+                  <!-- Labels -->
+                  <text x="30" y="38" text-anchor="middle" fill="white" font-size="6">L Eye</text>
+                  <text x="70" y="38" text-anchor="middle" fill="var(--text-dim)" font-size="6">R Eye</text>
+                  <text x="50" y="28" text-anchor="middle" fill="var(--text-dim)" font-size="6">Front</text>
+                </svg>
               </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center; margin-top: 2px;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 4px;"><button class="btn btn-primary">Start Session</button></div>
+              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 10px;">
+                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected:</div>
+                <div style="font-size: var(--fs-sm); color: var(--danger); font-weight: 600;">Left orbital / periorbital</div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Continue</button>
             </div>
           </div>
         </div>
-        <span class="screen-label">09d. Faces + Curve — Severe</span>
+        <span class="screen-label">63. Pain Location Map</span>
       </div>
 
-      <!-- 11c: Exponential Curve Slider Mild -->
+      <!-- 64: Pain Quality/Type -->
       <div class="screen-item">
         <div class="device-frame">
-          <div class="screen-number">11c</div>
+          <div class="screen-number">64</div>
           <div class="device-screen">
             <div class="status-bar">
               <span class="time">9:41</span>
@@ -1620,57 +1467,46 @@
                 <div class="battery-icon"><div class="battery-fill"></div></div>
               </div>
             </div>
-            <div class="screen-content assessment-content">
-              <div class="assessment-header" style="padding: 2px 0 4px;"><div class="title">Pain Level</div></div>
-              <div class="slider-container" style="padding: 8px 10px;">
-                <!-- Exponential curve visualization -->
-                <div style="height: 40px; position: relative; margin-bottom: 4px;">
-                  <svg viewBox="0 0 100 35" preserveAspectRatio="none" style="width: 100%; height: 100%;">
-                    <defs>
-                      <linearGradient id="curveGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#4DD4C4;stop-opacity:0.3"/>
-                        <stop offset="60%" style="stop-color:#F4B942;stop-opacity:0.4"/>
-                        <stop offset="100%" style="stop-color:#E85454;stop-opacity:0.6"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M0,35 Q20,34 40,31 Q60,25 80,14 Q95,4 100,0 L100,35 Z" fill="url(#curveGradient3)"/>
-                    <path d="M0,35 Q20,34 40,31 Q60,25 80,14 Q95,4 100,0" fill="none" stroke="var(--text-secondary)" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="27" cy="32" r="3.5" fill="var(--teal)" stroke="var(--dark-bg)" stroke-width="1.5"/>
-                  </svg>
-                  <div style="position: absolute; top: 0; right: 2px; font-size: 0.45rem; color: var(--text-dim);">Suffering</div>
+            <div class="screen-content" style="padding: 12px 14px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Pain Quality</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">Select all that apply</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px;">
+                <div style="background: var(--danger-dim); border: 2px solid var(--danger); border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: 1.2rem;">🔪</div>
+                  <div style="font-size: var(--fs-xs); color: var(--danger); margin-top: 4px;">Stabbing</div>
                 </div>
-                <div class="discrete-slider" style="height: 40px;">
-                  <div class="slider-track"></div>
-                  <div class="slider-notches">
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                  </div>
-                  <div class="slider-thumb" style="left: 27%;"></div>
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: 1.2rem;">🔥</div>
+                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Burning</div>
                 </div>
-                <div class="slider-labels" style="margin-bottom: 4px;"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display" style="margin-top: 2px;"><span class="number" style="color: var(--teal); font-size: var(--fs-lg);">3</span><span class="max" style="font-size: var(--fs-base);">/10</span><div class="descriptor">Mild Pain</div></div>
+                <div style="background: var(--danger-dim); border: 2px solid var(--danger); border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: 1.2rem;">💢</div>
+                  <div style="font-size: var(--fs-xs); color: var(--danger); margin-top: 4px;">Throbbing</div>
+                </div>
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: 1.2rem;">🗜️</div>
+                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Pressure</div>
+                </div>
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: 1.2rem;">⚡</div>
+                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Electric</div>
+                </div>
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: 1.2rem;">😶</div>
+                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Dull</div>
+                </div>
               </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center; margin-top: 4px;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 4px;"><button class="btn btn-primary">Start Session</button></div>
+              <button class="btn btn-primary" style="width: 100%;">Continue</button>
             </div>
           </div>
         </div>
-        <span class="screen-label">11c. Exponential Curve — Mild</span>
+        <span class="screen-label">64. Pain Quality</span>
       </div>
 
-      <!-- 11d: Faces + Exponential Curve Mild -->
+      <!-- 65: Valence/Emotional Gradient -->
       <div class="screen-item">
         <div class="device-frame">
-          <div class="screen-number">11d</div>
+          <div class="screen-number">65</div>
           <div class="device-screen">
             <div class="status-bar">
               <span class="time">9:41</span>
@@ -1680,61 +1516,356 @@
                 <div class="battery-icon"><div class="battery-fill"></div></div>
               </div>
             </div>
-            <div class="screen-content assessment-content">
-              <div class="assessment-header" style="padding: 2px 0 4px;"><div class="title">Pain Level</div></div>
-              <div class="slider-container" style="padding: 6px 10px 8px;">
-                <div class="faces-row" style="justify-content: space-between; margin-bottom: 4px;">
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😊</div>
-                  <div class="face-option selected-mild" style="font-size: 1rem; padding: 3px;">🙂</div>
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😐</div>
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😟</div>
-                  <div class="face-option" style="font-size: 1rem; padding: 3px;">😣</div>
+            <div class="screen-content" style="padding: 12px 14px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Emotional State</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 12px;">Slide to indicate how you're feeling</div>
+              <!-- Fear/Peace gradient -->
+              <div style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px;">
+                  <span style="color: var(--danger);">Fear</span>
+                  <span style="color: var(--teal);">Peace</span>
                 </div>
-                <div style="height: 32px; position: relative; margin-bottom: 2px;">
-                  <svg viewBox="0 0 100 28" preserveAspectRatio="none" style="width: 100%; height: 100%;">
-                    <defs>
-                      <linearGradient id="curveGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#4DD4C4;stop-opacity:0.3"/>
-                        <stop offset="60%" style="stop-color:#F4B942;stop-opacity:0.4"/>
-                        <stop offset="100%" style="stop-color:#E85454;stop-opacity:0.6"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M0,28 Q20,27 40,25 Q60,20 80,11 Q95,3 100,0 L100,28 Z" fill="url(#curveGradient4)"/>
-                    <path d="M0,28 Q20,27 40,25 Q60,20 80,11 Q95,3 100,0" fill="none" stroke="var(--text-secondary)" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="27" cy="25" r="3" fill="var(--teal)" stroke="var(--dark-bg)" stroke-width="1.5"/>
-                  </svg>
+                <div style="height: 24px; background: linear-gradient(to right, var(--danger) 0%, var(--amber) 50%, var(--teal) 100%); border-radius: 12px; position: relative;">
+                  <div style="position: absolute; top: 50%; left: 35%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
                 </div>
-                <div class="discrete-slider" style="height: 36px;">
-                  <div class="slider-track"></div>
-                  <div class="slider-notches">
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                    <div class="notch"><div class="notch-dot"></div></div>
-                  </div>
-                  <div class="slider-thumb" style="left: 27%;"></div>
-                </div>
-                <div class="slider-labels" style="margin-bottom: 2px;"><span>0</span><span>2</span><span>4</span><span>6</span><span class="high">8</span><span class="high">10</span></div>
-                <div class="slider-value-display" style="margin-top: 0;"><span class="number" style="color: var(--teal); font-size: var(--fs-lg);">3</span><span class="max" style="font-size: var(--fs-base);">/10</span><div class="descriptor" style="margin-top: 0;">Mild Pain</div></div>
               </div>
-              <button class="btn btn-ghost btn-small btn-icon" style="align-self: center; margin-top: 2px;"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voice Note</button>
-              <div style="margin-top: auto; padding-top: 4px;"><button class="btn btn-primary">Start Session</button></div>
+              <!-- Anxiety/Calm gradient -->
+              <div style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px;">
+                  <span style="color: var(--amber);">Anxious</span>
+                  <span style="color: var(--teal);">Calm</span>
+                </div>
+                <div style="height: 24px; background: linear-gradient(to right, var(--amber) 0%, var(--teal) 100%); border-radius: 12px; position: relative;">
+                  <div style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
+                </div>
+              </div>
+              <!-- Despair/Hope gradient -->
+              <div style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px;">
+                  <span style="color: var(--text-dim);">Despair</span>
+                  <span style="color: #9B59B6;">Hope</span>
+                </div>
+                <div style="height: 24px; background: linear-gradient(to right, var(--surface) 0%, #9B59B6 100%); border-radius: 12px; position: relative;">
+                  <div style="position: absolute; top: 50%; left: 60%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Start Session</button>
             </div>
           </div>
         </div>
-        <span class="screen-label">11d. Faces + Curve — Mild</span>
+        <span class="screen-label">65. Valence Gradient</span>
       </div>
+
+      <!-- 65b: Valence Triangle -->
+      <div class="screen-item">
+        <div class="device-frame">
+          <div class="screen-number">65b</div>
+          <div class="device-screen">
+            <div class="status-bar">
+              <span class="time">9:41</span>
+              <div class="indicators">
+                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+                <div class="battery-icon"><div class="battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="screen-content" style="padding: 10px 12px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 4px;">Emotional Valence</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 8px;">How did the experience feel?</div>
+              <!-- Valence Triangle -->
+              <div style="position: relative; width: 170px; height: 147px; margin: 0 auto 10px;">
+                <svg viewBox="0 0 170 147" style="position: absolute; width: 100%; height: 100%;">
+                  <defs>
+                    <linearGradient id="valence-grad-top" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#FF0000"/>
+                      <stop offset="50%" stop-color="#880088"/>
+                      <stop offset="100%" stop-color="#0066FF"/>
+                    </linearGradient>
+                    <linearGradient id="valence-grad-black" x1="50%" y1="0%" x2="50%" y2="100%">
+                      <stop offset="0%" stop-color="transparent"/>
+                      <stop offset="100%" stop-color="#000000"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-top)"/>
+                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-black)" opacity="0.92"/>
+                  <polygon points="5,5 165,5 85,142" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                </svg>
+                <!-- Vertices -->
+                <div style="position: absolute; left: 3%; top: 3.5%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: #FF0000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 600;">−</div>
+                <div style="position: absolute; left: 97%; top: 3.5%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: #0066FF; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 600;">+</div>
+                <div style="position: absolute; left: 50%; top: 96.5%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: #000000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 600;">○</div>
+                <!-- Top edge notches -->
+                <div style="position: absolute; left: 26.6%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0022; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 50%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #880088; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 73.4%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #2244DD; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <!-- Left edge notches -->
+                <div style="position: absolute; left: 14.8%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0011; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 26.6%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #991100; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 38.3%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #550000; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <!-- Right edge notches -->
+                <div style="position: absolute; left: 85.2%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #0055EE; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 0 8px #0055EE, 0 0 16px #0055EE;"></div>
+                <div style="position: absolute; left: 73.4%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #003399; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 61.7%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #001155; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <!-- Center point -->
+                <div style="position: absolute; left: 50%; top: 34.5%; transform: translate(-50%, -50%); width: 12px; height: 12px; border-radius: 50%; background: #442244; border: 2px solid rgba(255,255,255,0.5);"></div>
+              </div>
+              <!-- Selection display -->
+              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 8px; text-align: center;">
+                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected</div>
+                <div style="font-size: var(--fs-sm); color: #0055EE; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #0055EE;"></span>
+                  Positive-Leaning
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Continue</button>
+            </div>
+          </div>
+        </div>
+        <span class="screen-label">65b. Valence Triangle</span>
+      </div>
+
+      <!-- 65c: Valence Triangle (Emoji) -->
+      <div class="screen-item">
+        <div class="device-frame">
+          <div class="screen-number">65c</div>
+          <div class="device-screen">
+            <div class="status-bar">
+              <span class="time">9:41</span>
+              <div class="indicators">
+                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+                <div class="battery-icon"><div class="battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="screen-content" style="padding: 10px 12px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 4px;">Emotional Valence</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 8px;">How did the experience feel?</div>
+              <!-- Valence Triangle Emoji Version -->
+              <div style="position: relative; width: 170px; height: 147px; margin: 0 auto 10px;">
+                <svg viewBox="0 0 170 147" style="position: absolute; width: 100%; height: 100%;">
+                  <defs>
+                    <linearGradient id="valence-grad-top-e" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#FF0000"/>
+                      <stop offset="50%" stop-color="#880088"/>
+                      <stop offset="100%" stop-color="#0066FF"/>
+                    </linearGradient>
+                    <linearGradient id="valence-grad-black-e" x1="50%" y1="0%" x2="50%" y2="100%">
+                      <stop offset="0%" stop-color="transparent"/>
+                      <stop offset="100%" stop-color="#000000"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-top-e)"/>
+                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-black-e)" opacity="0.92"/>
+                  <polygon points="5,5 165,5 85,142" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                </svg>
+                <!-- Vertices with Emoji -->
+                <div style="position: absolute; left: 3%; top: 3.5%; transform: translate(-50%, -50%); width: 20px; height: 20px; border-radius: 50%; background: #FF0000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">😓</div>
+                <div style="position: absolute; left: 97%; top: 3.5%; transform: translate(-50%, -50%); width: 20px; height: 20px; border-radius: 50%; background: #0066FF; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">😊</div>
+                <div style="position: absolute; left: 50%; top: 96.5%; transform: translate(-50%, -50%); width: 20px; height: 20px; border-radius: 50%; background: #000000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">😐</div>
+                <!-- Top edge notches -->
+                <div style="position: absolute; left: 26.6%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0022; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 50%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #880088; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 73.4%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #2244DD; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <!-- Left edge notches -->
+                <div style="position: absolute; left: 14.8%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0011; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 26.6%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #991100; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 38.3%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #550000; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <!-- Right edge notches -->
+                <div style="position: absolute; left: 85.2%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #0055EE; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 73.4%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #003399; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <div style="position: absolute; left: 61.7%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #001155; border: 1px solid rgba(255,255,255,0.4);"></div>
+                <!-- Center point with Emoji -->
+                <div style="position: absolute; left: 50%; top: 34.5%; transform: translate(-50%, -50%); width: 16px; height: 16px; border-radius: 50%; background: #442244; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; box-shadow: 0 0 10px #442244, 0 0 20px #442244;">🤷</div>
+              </div>
+              <!-- Selection display -->
+              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 8px; text-align: center;">
+                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected</div>
+                <div style="font-size: var(--fs-sm); color: #886688; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                  <span style="font-size: 1rem;">🤷</span>
+                  Mixed
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Continue</button>
+            </div>
+          </div>
+        </div>
+        <span class="screen-label">65c. Valence Triangle (Emoji)</span>
+      </div>
+
+      <!-- 66: Temporal Pattern -->
+      <div class="screen-item">
+        <div class="device-frame">
+          <div class="screen-number">66</div>
+          <div class="device-screen">
+            <div class="status-bar">
+              <span class="time">9:41</span>
+              <div class="indicators">
+                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+                <div class="battery-icon"><div class="battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="screen-content" style="padding: 12px 14px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Attack Timing</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">When did this attack begin?</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px;">
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: var(--fs-sm); font-weight: 600;">< 5 min</div>
+                  <div style="font-size: var(--fs-xs); color: var(--text-dim);">Just started</div>
+                </div>
+                <div style="background: var(--teal-dim); border: 2px solid var(--teal); border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: var(--fs-sm); font-weight: 600; color: var(--teal);">5-15 min</div>
+                  <div style="font-size: var(--fs-xs); color: var(--teal);">Building</div>
+                </div>
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: var(--fs-sm); font-weight: 600;">15-30 min</div>
+                  <div style="font-size: var(--fs-xs); color: var(--text-dim);">Established</div>
+                </div>
+                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
+                  <div style="font-size: var(--fs-sm); font-weight: 600;">> 30 min</div>
+                  <div style="font-size: var(--fs-xs); color: var(--text-dim);">Prolonged</div>
+                </div>
+              </div>
+              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 10px;">
+                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Prodrome detected?</div>
+                <div style="display: flex; gap: 8px; margin-top: 6px;">
+                  <button style="flex: 1; padding: 6px; background: var(--teal-dim); border: 1px solid var(--teal); border-radius: 4px; color: var(--teal); font-size: var(--fs-xs);">Yes</button>
+                  <button style="flex: 1; padding: 6px; background: var(--surface-elevated); border: 1px solid var(--text-dim); border-radius: 4px; color: var(--text-secondary); font-size: var(--fs-xs);">No</button>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Continue</button>
+            </div>
+          </div>
+        </div>
+        <span class="screen-label">66. Temporal Pattern</span>
+      </div>
+
+      <!-- 67: Functional Impact -->
+      <div class="screen-item">
+        <div class="device-frame">
+          <div class="screen-number">67</div>
+          <div class="device-screen">
+            <div class="status-bar">
+              <span class="time">9:41</span>
+              <div class="indicators">
+                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+                <div class="battery-icon"><div class="battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="screen-content" style="padding: 12px 14px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Functional Impact</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">How is this affecting you?</div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px;">
+                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: var(--fs-sm);">Work/productivity</span>
+                  <div style="display: flex; gap: 4px;">
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
+                  </div>
+                </div>
+                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: var(--fs-sm);">Social activities</span>
+                  <div style="display: flex; gap: 4px;">
+                    <div style="width: 10px; height: 10px; background: var(--amber); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--amber); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
+                  </div>
+                </div>
+                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: var(--fs-sm);">Sleep quality</span>
+                  <div style="display: flex; gap: 4px;">
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
+                  </div>
+                </div>
+                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: var(--fs-sm);">Self-care</span>
+                  <div style="display: flex; gap: 4px;">
+                    <div style="width: 10px; height: 10px; background: var(--amber); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
+                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Start Session</button>
+            </div>
+          </div>
+        </div>
+        <span class="screen-label">67. Functional Impact</span>
+      </div>
+
+      <!-- 68: 2D Composite Matrix -->
+      <div class="screen-item">
+        <div class="device-frame">
+          <div class="screen-number">68</div>
+          <div class="device-screen">
+            <div class="status-bar">
+              <span class="time">9:41</span>
+              <div class="indicators">
+                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+                <div class="battery-icon"><div class="battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="screen-content" style="padding: 12px 14px;">
+              <div class="title" style="font-size: var(--fs-md); margin-bottom: 6px;">Intensity × Quality</div>
+              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">Tap to characterize your pain</div>
+              <!-- 2D Matrix -->
+              <div style="position: relative; margin-bottom: 12px;">
+                <div style="position: absolute; left: -2px; top: 50%; transform: translateY(-50%) rotate(-90deg); font-size: 0.45rem; color: var(--text-dim); white-space: nowrap;">INTENSITY →</div>
+                <div style="margin-left: 12px;">
+                  <div style="display: flex; justify-content: space-around; margin-bottom: 4px; font-size: 0.45rem; color: var(--text-dim);">
+                    <span>Dull</span><span>Sharp</span><span>Burning</span><span>Throb</span>
+                  </div>
+                  <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); gap: 3px; height: 120px;">
+                    <!-- Row 4 (high intensity) -->
+                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
+                    <div style="background: var(--danger-dim); border-radius: 4px;"></div>
+                    <div style="background: var(--danger); border-radius: 4px; border: 2px solid white;"></div>
+                    <div style="background: var(--danger-dim); border-radius: 4px;"></div>
+                    <!-- Row 3 -->
+                    <div style="background: var(--surface); border-radius: 4px;"></div>
+                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
+                    <div style="background: var(--danger-dim); border-radius: 4px;"></div>
+                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
+                    <!-- Row 2 -->
+                    <div style="background: var(--surface); border-radius: 4px;"></div>
+                    <div style="background: var(--surface); border-radius: 4px;"></div>
+                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
+                    <div style="background: var(--surface); border-radius: 4px;"></div>
+                    <!-- Row 1 (low intensity) -->
+                    <div style="background: var(--teal-dim); border-radius: 4px;"></div>
+                    <div style="background: var(--surface); border-radius: 4px;"></div>
+                    <div style="background: var(--surface); border-radius: 4px;"></div>
+                    <div style="background: var(--teal-dim); border-radius: 4px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-top: 4px; font-size: 0.45rem; color: var(--text-dim);">
+                    <span>Low</span><span>High</span>
+                  </div>
+                </div>
+              </div>
+              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 10px;">
+                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected:</div>
+                <div style="font-size: var(--fs-sm); color: var(--danger); font-weight: 600;">High intensity + Burning</div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Start Session</button>
+            </div>
+          </div>
+        </div>
+        <span class="screen-label">68. 2D Composite Matrix</span>
+      </div>
+
     </div>
   </section>
 
-  </section><section id="section-4"><!-- SECTION 4: ADMINISTRATION -->
+  <section id="section-4"><!-- SECTION 4: ADMINISTRATION -->
   <section class="screen-section">
     <h2 class="section-title">4. Administration Flow</h2>
     <p class="section-description">Guided breathing, session monitoring with ReDose, and completion.</p>
@@ -3758,468 +3889,6 @@
           </div>
         </div>
         <span class="screen-label">62. Sponsor Alert</span>
-      </div>
-
-    </div>
-  </section>
-
-  </section><section id="section-19"><!-- SECTION 19: MULTIDIMENSIONAL PAIN ASSESSMENT -->
-  <section class="screen-section">
-    <h2 class="section-title">19. Multidimensional Assessment</h2>
-    <p class="section-description">Advanced pain characterization: location mapping, quality descriptors, valence triangle, and composite matrices.</p>
-    <div class="screen-grid">
-
-      <!-- 63: Pain Location Body Map -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">63</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 12px 14px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Where is the pain?</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">Tap affected areas on head map</div>
-              <!-- Head map SVG -->
-              <div style="display: flex; justify-content: center; margin-bottom: 12px;">
-                <svg viewBox="0 0 100 120" style="width: 140px; height: 160px;">
-                  <!-- Head outline -->
-                  <ellipse cx="50" cy="50" rx="40" ry="45" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
-                  <!-- Zones -->
-                  <circle cx="30" cy="35" r="12" fill="var(--danger)" opacity="0.6" stroke="var(--danger)" stroke-width="2"/>
-                  <circle cx="70" cy="35" r="12" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
-                  <circle cx="50" cy="25" r="10" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
-                  <circle cx="50" cy="55" r="10" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
-                  <circle cx="30" cy="60" r="8" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
-                  <circle cx="70" cy="60" r="8" fill="var(--surface)" stroke="var(--text-dim)" stroke-width="1"/>
-                  <!-- Labels -->
-                  <text x="30" y="38" text-anchor="middle" fill="white" font-size="6">L Eye</text>
-                  <text x="70" y="38" text-anchor="middle" fill="var(--text-dim)" font-size="6">R Eye</text>
-                  <text x="50" y="28" text-anchor="middle" fill="var(--text-dim)" font-size="6">Front</text>
-                </svg>
-              </div>
-              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 10px;">
-                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected:</div>
-                <div style="font-size: var(--fs-sm); color: var(--danger); font-weight: 600;">Left orbital / periorbital</div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Continue</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">63. Pain Location Map</span>
-      </div>
-
-      <!-- 64: Pain Quality/Type -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">64</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 12px 14px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Pain Quality</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">Select all that apply</div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px;">
-                <div style="background: var(--danger-dim); border: 2px solid var(--danger); border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: 1.2rem;">🔪</div>
-                  <div style="font-size: var(--fs-xs); color: var(--danger); margin-top: 4px;">Stabbing</div>
-                </div>
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: 1.2rem;">🔥</div>
-                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Burning</div>
-                </div>
-                <div style="background: var(--danger-dim); border: 2px solid var(--danger); border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: 1.2rem;">💢</div>
-                  <div style="font-size: var(--fs-xs); color: var(--danger); margin-top: 4px;">Throbbing</div>
-                </div>
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: 1.2rem;">🗜️</div>
-                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Pressure</div>
-                </div>
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: 1.2rem;">⚡</div>
-                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Electric</div>
-                </div>
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: 1.2rem;">😶</div>
-                  <div style="font-size: var(--fs-xs); margin-top: 4px;">Dull</div>
-                </div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Continue</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">64. Pain Quality</span>
-      </div>
-
-      <!-- 65: Valence/Emotional Gradient -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">65</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 12px 14px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Emotional State</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 12px;">Slide to indicate how you're feeling</div>
-              <!-- Fear/Peace gradient -->
-              <div style="margin-bottom: 16px;">
-                <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px;">
-                  <span style="color: var(--danger);">Fear</span>
-                  <span style="color: var(--teal);">Peace</span>
-                </div>
-                <div style="height: 24px; background: linear-gradient(to right, var(--danger) 0%, var(--amber) 50%, var(--teal) 100%); border-radius: 12px; position: relative;">
-                  <div style="position: absolute; top: 50%; left: 35%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
-                </div>
-              </div>
-              <!-- Anxiety/Calm gradient -->
-              <div style="margin-bottom: 16px;">
-                <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px;">
-                  <span style="color: var(--amber);">Anxious</span>
-                  <span style="color: var(--teal);">Calm</span>
-                </div>
-                <div style="height: 24px; background: linear-gradient(to right, var(--amber) 0%, var(--teal) 100%); border-radius: 12px; position: relative;">
-                  <div style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
-                </div>
-              </div>
-              <!-- Despair/Hope gradient -->
-              <div style="margin-bottom: 16px;">
-                <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs); margin-bottom: 4px;">
-                  <span style="color: var(--text-dim);">Despair</span>
-                  <span style="color: #9B59B6;">Hope</span>
-                </div>
-                <div style="height: 24px; background: linear-gradient(to right, var(--surface) 0%, #9B59B6 100%); border-radius: 12px; position: relative;">
-                  <div style="position: absolute; top: 50%; left: 60%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
-                </div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Start Session</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">65. Valence Gradient</span>
-      </div>
-
-      <!-- 65b: Valence Triangle -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">65b</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 10px 12px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 4px;">Emotional Valence</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 8px;">How did the experience feel?</div>
-              <!-- Valence Triangle -->
-              <div style="position: relative; width: 170px; height: 147px; margin: 0 auto 10px;">
-                <svg viewBox="0 0 170 147" style="position: absolute; width: 100%; height: 100%;">
-                  <defs>
-                    <linearGradient id="valence-grad-top" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#FF0000"/>
-                      <stop offset="50%" stop-color="#880088"/>
-                      <stop offset="100%" stop-color="#0066FF"/>
-                    </linearGradient>
-                    <linearGradient id="valence-grad-black" x1="50%" y1="0%" x2="50%" y2="100%">
-                      <stop offset="0%" stop-color="transparent"/>
-                      <stop offset="100%" stop-color="#000000"/>
-                    </linearGradient>
-                  </defs>
-                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-top)"/>
-                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-black)" opacity="0.92"/>
-                  <polygon points="5,5 165,5 85,142" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-                </svg>
-                <!-- Vertices -->
-                <div style="position: absolute; left: 3%; top: 3.5%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: #FF0000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 600;">−</div>
-                <div style="position: absolute; left: 97%; top: 3.5%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: #0066FF; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 600;">+</div>
-                <div style="position: absolute; left: 50%; top: 96.5%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: #000000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 600;">○</div>
-                <!-- Top edge notches -->
-                <div style="position: absolute; left: 26.6%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0022; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 50%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #880088; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 73.4%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #2244DD; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <!-- Left edge notches -->
-                <div style="position: absolute; left: 14.8%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0011; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 26.6%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #991100; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 38.3%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #550000; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <!-- Right edge notches -->
-                <div style="position: absolute; left: 85.2%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #0055EE; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 0 8px #0055EE, 0 0 16px #0055EE;"></div>
-                <div style="position: absolute; left: 73.4%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #003399; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 61.7%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #001155; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <!-- Center point -->
-                <div style="position: absolute; left: 50%; top: 34.5%; transform: translate(-50%, -50%); width: 12px; height: 12px; border-radius: 50%; background: #442244; border: 2px solid rgba(255,255,255,0.5);"></div>
-              </div>
-              <!-- Selection display -->
-              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 8px; text-align: center;">
-                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected</div>
-                <div style="font-size: var(--fs-sm); color: #0055EE; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #0055EE;"></span>
-                  Positive-Leaning
-                </div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Continue</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">65b. Valence Triangle</span>
-      </div>
-
-      <!-- 65c: Valence Triangle (Emoji) -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">65c</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 10px 12px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 4px;">Emotional Valence</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 8px;">How did the experience feel?</div>
-              <!-- Valence Triangle Emoji Version -->
-              <div style="position: relative; width: 170px; height: 147px; margin: 0 auto 10px;">
-                <svg viewBox="0 0 170 147" style="position: absolute; width: 100%; height: 100%;">
-                  <defs>
-                    <linearGradient id="valence-grad-top-e" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#FF0000"/>
-                      <stop offset="50%" stop-color="#880088"/>
-                      <stop offset="100%" stop-color="#0066FF"/>
-                    </linearGradient>
-                    <linearGradient id="valence-grad-black-e" x1="50%" y1="0%" x2="50%" y2="100%">
-                      <stop offset="0%" stop-color="transparent"/>
-                      <stop offset="100%" stop-color="#000000"/>
-                    </linearGradient>
-                  </defs>
-                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-top-e)"/>
-                  <polygon points="5,5 165,5 85,142" fill="url(#valence-grad-black-e)" opacity="0.92"/>
-                  <polygon points="5,5 165,5 85,142" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-                </svg>
-                <!-- Vertices with Emoji -->
-                <div style="position: absolute; left: 3%; top: 3.5%; transform: translate(-50%, -50%); width: 20px; height: 20px; border-radius: 50%; background: #FF0000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">😓</div>
-                <div style="position: absolute; left: 97%; top: 3.5%; transform: translate(-50%, -50%); width: 20px; height: 20px; border-radius: 50%; background: #0066FF; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">😊</div>
-                <div style="position: absolute; left: 50%; top: 96.5%; transform: translate(-50%, -50%); width: 20px; height: 20px; border-radius: 50%; background: #000000; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">😐</div>
-                <!-- Top edge notches -->
-                <div style="position: absolute; left: 26.6%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0022; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 50%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #880088; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 73.4%; top: 3.5%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #2244DD; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <!-- Left edge notches -->
-                <div style="position: absolute; left: 14.8%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #DD0011; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 26.6%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #991100; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 38.3%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #550000; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <!-- Right edge notches -->
-                <div style="position: absolute; left: 85.2%; top: 26.8%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #0055EE; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 73.4%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #003399; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <div style="position: absolute; left: 61.7%; top: 73.2%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: #001155; border: 1px solid rgba(255,255,255,0.4);"></div>
-                <!-- Center point with Emoji -->
-                <div style="position: absolute; left: 50%; top: 34.5%; transform: translate(-50%, -50%); width: 16px; height: 16px; border-radius: 50%; background: #442244; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; box-shadow: 0 0 10px #442244, 0 0 20px #442244;">🤷</div>
-              </div>
-              <!-- Selection display -->
-              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 8px; text-align: center;">
-                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected</div>
-                <div style="font-size: var(--fs-sm); color: #886688; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                  <span style="font-size: 1rem;">🤷</span>
-                  Mixed
-                </div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Continue</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">65c. Valence Triangle (Emoji)</span>
-      </div>
-
-      <!-- 66: Temporal Pattern -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">66</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 12px 14px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Attack Timing</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">When did this attack begin?</div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px;">
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: var(--fs-sm); font-weight: 600;">< 5 min</div>
-                  <div style="font-size: var(--fs-xs); color: var(--text-dim);">Just started</div>
-                </div>
-                <div style="background: var(--teal-dim); border: 2px solid var(--teal); border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: var(--fs-sm); font-weight: 600; color: var(--teal);">5-15 min</div>
-                  <div style="font-size: var(--fs-xs); color: var(--teal);">Building</div>
-                </div>
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: var(--fs-sm); font-weight: 600;">15-30 min</div>
-                  <div style="font-size: var(--fs-xs); color: var(--text-dim);">Established</div>
-                </div>
-                <div style="background: var(--surface); border: 2px solid transparent; border-radius: 8px; padding: 10px; text-align: center;">
-                  <div style="font-size: var(--fs-sm); font-weight: 600;">> 30 min</div>
-                  <div style="font-size: var(--fs-xs); color: var(--text-dim);">Prolonged</div>
-                </div>
-              </div>
-              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 10px;">
-                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Prodrome detected?</div>
-                <div style="display: flex; gap: 8px; margin-top: 6px;">
-                  <button style="flex: 1; padding: 6px; background: var(--teal-dim); border: 1px solid var(--teal); border-radius: 4px; color: var(--teal); font-size: var(--fs-xs);">Yes</button>
-                  <button style="flex: 1; padding: 6px; background: var(--surface-elevated); border: 1px solid var(--text-dim); border-radius: 4px; color: var(--text-secondary); font-size: var(--fs-xs);">No</button>
-                </div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Continue</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">66. Temporal Pattern</span>
-      </div>
-
-      <!-- 67: Functional Impact -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">67</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 12px 14px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 8px;">Functional Impact</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">How is this affecting you?</div>
-              <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px;">
-                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: var(--fs-sm);">Work/productivity</span>
-                  <div style="display: flex; gap: 4px;">
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
-                  </div>
-                </div>
-                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: var(--fs-sm);">Social activities</span>
-                  <div style="display: flex; gap: 4px;">
-                    <div style="width: 10px; height: 10px; background: var(--amber); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--amber); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
-                  </div>
-                </div>
-                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: var(--fs-sm);">Sleep quality</span>
-                  <div style="display: flex; gap: 4px;">
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--danger); border-radius: 50%;"></div>
-                  </div>
-                </div>
-                <div style="background: var(--surface); border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: var(--fs-sm);">Self-care</span>
-                  <div style="display: flex; gap: 4px;">
-                    <div style="width: 10px; height: 10px; background: var(--amber); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
-                    <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%;"></div>
-                  </div>
-                </div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Start Session</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">67. Functional Impact</span>
-      </div>
-
-      <!-- 68: 2D Composite Matrix -->
-      <div class="screen-item">
-        <div class="device-frame">
-          <div class="screen-number">68</div>
-          <div class="device-screen">
-            <div class="status-bar">
-              <span class="time">9:41</span>
-              <div class="indicators">
-                <svg class="icon-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                <svg class="icon-bt" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
-                <div class="battery-icon"><div class="battery-fill"></div></div>
-              </div>
-            </div>
-            <div class="screen-content" style="padding: 12px 14px;">
-              <div class="title" style="font-size: var(--fs-md); margin-bottom: 6px;">Intensity × Quality</div>
-              <div style="font-size: var(--fs-xs); color: var(--text-dim); margin-bottom: 10px;">Tap to characterize your pain</div>
-              <!-- 2D Matrix -->
-              <div style="position: relative; margin-bottom: 12px;">
-                <div style="position: absolute; left: -2px; top: 50%; transform: translateY(-50%) rotate(-90deg); font-size: 0.45rem; color: var(--text-dim); white-space: nowrap;">INTENSITY →</div>
-                <div style="margin-left: 12px;">
-                  <div style="display: flex; justify-content: space-around; margin-bottom: 4px; font-size: 0.45rem; color: var(--text-dim);">
-                    <span>Dull</span><span>Sharp</span><span>Burning</span><span>Throb</span>
-                  </div>
-                  <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); gap: 3px; height: 120px;">
-                    <!-- Row 4 (high intensity) -->
-                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
-                    <div style="background: var(--danger-dim); border-radius: 4px;"></div>
-                    <div style="background: var(--danger); border-radius: 4px; border: 2px solid white;"></div>
-                    <div style="background: var(--danger-dim); border-radius: 4px;"></div>
-                    <!-- Row 3 -->
-                    <div style="background: var(--surface); border-radius: 4px;"></div>
-                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
-                    <div style="background: var(--danger-dim); border-radius: 4px;"></div>
-                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
-                    <!-- Row 2 -->
-                    <div style="background: var(--surface); border-radius: 4px;"></div>
-                    <div style="background: var(--surface); border-radius: 4px;"></div>
-                    <div style="background: var(--amber-dim); border-radius: 4px;"></div>
-                    <div style="background: var(--surface); border-radius: 4px;"></div>
-                    <!-- Row 1 (low intensity) -->
-                    <div style="background: var(--teal-dim); border-radius: 4px;"></div>
-                    <div style="background: var(--surface); border-radius: 4px;"></div>
-                    <div style="background: var(--surface); border-radius: 4px;"></div>
-                    <div style="background: var(--teal-dim); border-radius: 4px;"></div>
-                  </div>
-                  <div style="display: flex; justify-content: space-between; margin-top: 4px; font-size: 0.45rem; color: var(--text-dim);">
-                    <span>Low</span><span>High</span>
-                  </div>
-                </div>
-              </div>
-              <div style="background: var(--surface); border-radius: 8px; padding: 8px; margin-bottom: 10px;">
-                <div style="font-size: var(--fs-xs); color: var(--text-dim);">Selected:</div>
-                <div style="font-size: var(--fs-sm); color: var(--danger); font-weight: 600;">High intensity + Burning</div>
-              </div>
-              <button class="btn btn-primary" style="width: 100%;">Start Session</button>
-            </div>
-          </div>
-        </div>
-        <span class="screen-label">68. 2D Composite Matrix</span>
       </div>
 
     </div>
@@ -6885,7 +6554,7 @@
                 </div>
                 <div style="flex: 1;">
                   <div style="font-size: 1rem; font-weight: 600;">Andres Gomez</div>
-                  <div style="font-size: 0.75rem; color: var(--text-dim);">andres@email.com</div>
+                  <div style="font-size: 0.75rem; color: var(--text-dim);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c3d32382e392f1c39313d3530723f3331">[email&#160;protected]</a></div>
                 </div>
                 <span style="color: var(--text-dim);">›</span>
               </div>
@@ -7975,7 +7644,7 @@
 
   <footer style="text-align: center; padding: 60px 20px; color: var(--text-secondary);">
     <p style="font-size: 1rem;">VeriDose UI Wireframe Library v7 — Complete Platform + Mobile App</p>
-    <p style="font-size: 0.875rem; margin-top: 8px;">Certus Medical — 142 screens across 40 sections</p>
+    <p style="font-size: 0.875rem; margin-top: 8px;">Certus Medical — 144 screens across 39 sections</p>
     <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 8px;">LAA Framework: Device + Companion App + Notifications + Widgets + Valence Triangle</p>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
       <span style="font-size: 0.6rem; padding: 4px 8px; background: var(--surface); border-radius: 4px;">Device Core</span>
@@ -7994,9 +7663,4 @@
       <span style="font-size: 0.6rem; padding: 4px 8px; background: var(--amber-dim); border-radius: 4px; color: var(--amber);">🚚 Refill Ordering</span>
       <span style="font-size: 0.6rem; padding: 4px 8px; background: rgba(155, 89, 182, 0.2); border-radius: 4px; color: #9B59B6;">🔔 Push Notifications</span>
       <span style="font-size: 0.6rem; padding: 4px 8px; background: rgba(155, 89, 182, 0.2); border-radius: 4px; color: #9B59B6;">📲 Widgets</span>
-      <span style="font-size: 0.6rem; padding: 4px 8px; background: rgba(136, 0, 136, 0.2); border-radius: 4px; color: #CC44CC;">📺 Valence Triangle</span>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <span style="font-size: 0.6rem; padding: 4px 8px; background: rgba(136, 0
