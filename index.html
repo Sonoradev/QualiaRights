@@ -591,11 +591,43 @@
     }
 
     /* Four Elements */
+    .elements-with-device {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 48px;
+    }
+
+    .elements-device {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .elements-device::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(77, 212, 196, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .elements-device-img {
+      max-width: 320px;
+      height: auto;
+      filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+      position: relative;
+      z-index: 1;
+    }
+
     .elements-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
-      margin-top: 48px;
     }
 
     .element-card {
@@ -1121,7 +1153,10 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .problem-grid,
+      .problem-grid { grid-template-columns: repeat(2, 1fr); }
+      .elements-with-device { grid-template-columns: 1fr; }
+      .elements-device { margin-bottom: 32px; }
+      .elements-device-img { max-width: 280px; }
       .elements-grid { grid-template-columns: repeat(2, 1fr); }
       .markets-grid { grid-template-columns: repeat(2, 1fr); }
       .ownership-content,
@@ -1135,6 +1170,7 @@
       .problem-grid,
       .elements-grid,
       .markets-grid { grid-template-columns: 1fr; }
+      .elements-device-img { max-width: 220px; }
       .story-flow { flex-direction: column; }
       .story-arrow { transform: rotate(90deg); }
       .ask-box { padding: 40px 24px; }
@@ -1304,35 +1340,40 @@
   </section>
 
   <!-- Four Elements Section -->
-  <section id="how" style="background: var(--device-bg);">
+  <section id="how" class="four-elements-section" style="background: var(--device-bg);">
     <div class="section-label">The Four Elements</div>
     <h2>Everything verified. Nothing hidden.</h2>
     <p class="lead">VeriDose enables Licensed Autonomous Access through four essential verification elements.</p>
 
-    <div class="elements-grid">
-      <div class="element-card">
-        <div class="element-icon">👤</div>
-        <h4>Identity</h4>
-        <div class="function">Who is authorized</div>
-        <p>Verified patient identity creates an accountability trail. We know exactly who is using the medicine.</p>
+    <div class="elements-with-device">
+      <div class="elements-device">
+        <img src="veridose_hero.png" alt="VeriDose Device" class="elements-device-img">
       </div>
-      <div class="element-card">
-        <div class="element-icon">💎</div>
-        <h4>Medicine</h4>
-        <div class="function">What is administered</div>
-        <p>Authenticated pharmaceutical-grade compounds with chain of custody. Every cartridge tracked and verified.</p>
-      </div>
-      <div class="element-card">
-        <div class="element-icon">📋</div>
-        <h4>Protocol</h4>
-        <div class="function">How it's administered</div>
-        <p>Standardized dosing methodology. Consistent temperature, timing, and technique across every administration.</p>
-      </div>
-      <div class="element-card">
-        <div class="element-icon">📊</div>
-        <h4>Evidence</h4>
-        <div class="function">What happened</div>
-        <p>Real-world outcomes recorded for every session. Individual data contributing to collective medical knowledge.</p>
+      <div class="elements-grid">
+        <div class="element-card">
+          <div class="element-icon">👤</div>
+          <h4>Identity</h4>
+          <div class="function">Who is authorized</div>
+          <p>Verified patient identity creates an accountability trail. We know exactly who is using the medicine.</p>
+        </div>
+        <div class="element-card">
+          <div class="element-icon">💎</div>
+          <h4>Medicine</h4>
+          <div class="function">What is administered</div>
+          <p>Authenticated pharmaceutical-grade compounds with chain of custody. Every cartridge tracked and verified.</p>
+        </div>
+        <div class="element-card">
+          <div class="element-icon">📋</div>
+          <h4>Protocol</h4>
+          <div class="function">How it's administered</div>
+          <p>Standardized dosing methodology. Consistent temperature, timing, and technique across every administration.</p>
+        </div>
+        <div class="element-card">
+          <div class="element-icon">📊</div>
+          <h4>Evidence</h4>
+          <div class="function">What happened</div>
+          <p>Real-world outcomes recorded for every session. Individual data contributing to collective medical knowledge.</p>
+        </div>
       </div>
     </div>
   </section>

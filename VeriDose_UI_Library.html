@@ -181,6 +181,75 @@
     }
     .page-header .subtitle { color: var(--text-secondary); font-size: 1.1rem; }
 
+    /* Hero Section */
+    .ui-hero {
+      position: relative;
+      padding: 120px 40px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .ui-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 40px;
+      z-index: 0;
+    }
+
+    .ui-hero-bg img {
+      height: 500px;
+      width: auto;
+      opacity: 0.25;
+      filter: drop-shadow(0 0 80px rgba(77, 212, 196, 0.3));
+    }
+
+    .ui-hero-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(13, 15, 20, 0.4) 0%,
+        rgba(13, 15, 20, 0.7) 50%,
+        rgba(13, 15, 20, 1) 100%
+      );
+      z-index: 1;
+    }
+
+    .ui-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .ui-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ui-hero .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .ui-hero .meta {
+      color: var(--text-dim);
+      font-size: 0.875rem;
+    }
+
     .screen-section { margin-bottom: 80px; }
     .section-title {
       font-size: 1.5rem;
@@ -966,14 +1035,17 @@
     <a href="#section-40">40. Widgets</a>
   </div>
 
-  <header class="page-header" style="padding-top: 60px;">
-    <h1>VeriDose UI Wireframes</h1>
-    <p class="subtitle">Certus Medical — Complete Device Interface Library</p>
-    <p style="color: var(--text-dim); font-size: 0.875rem; margin-top: 8px;">40 Sections • 150+ Screens • Device & Mobile Interfaces</p>
-  </header>
-    <p class="subtitle">Certus Medical — Device Interface Library v6</p>
-    <p style="color: var(--text-dim); font-size: 0.875rem; margin-top: 8px;">Updated: Faces+Slider combo • Gradient pain grid • Teal highlights • Inline checkmark</p>
-  </header>
+  <section class="ui-hero">
+    <div class="ui-hero-bg">
+      <img src="veridose_hero.png" alt="VeriDose Device">
+      <div class="ui-hero-gradient"></div>
+    </div>
+    <div class="ui-hero-content">
+      <h1>VeriDose UI Wireframes</h1>
+      <p class="subtitle">Certus Medical — Complete Device Interface Library</p>
+      <p class="meta">39 Sections • 144 Screens • Device & Mobile Interfaces</p>
+    </div>
+  </section>
 
   <section id="section-1"><!-- SECTION 1: AUTHENTICATION -->
   <section class="screen-section">
