@@ -138,6 +138,17 @@
       pointer-events: none;
     }
 
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-text {
+      position: relative;
+    }
+
     .hero h1 { margin-bottom: 24px; position: relative; }
 
     .hero .highlight {
@@ -149,6 +160,52 @@
       color: var(--text-secondary);
       max-width: 700px;
       margin-bottom: 48px;
+    }
+
+    .hero-device {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-device::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(77, 212, 196, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .hero-device-img {
+      max-width: 380px;
+      height: auto;
+      filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-device {
+        order: -1;
+        margin-bottom: 32px;
+      }
+      .hero-device-img {
+        max-width: 280px;
+      }
+      .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .cta-group {
+        justify-content: center;
+      }
     }
 
     .cta-group {
@@ -295,6 +352,216 @@
 
     .story-explanation p + p {
       margin-top: 24px;
+    }
+
+    /* Third Path Section */
+    .third-path {
+      background: linear-gradient(180deg, var(--device-bg) 0%, var(--dark-bg) 100%);
+    }
+
+    .paths-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 32px;
+      align-items: stretch;
+      margin-top: 64px;
+      margin-bottom: 64px;
+    }
+
+    .path-card {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 40px 32px;
+      border: 2px solid rgba(255,255,255,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .path-pharma {
+      border-color: rgba(244, 185, 66, 0.3);
+    }
+
+    .path-underground {
+      border-color: rgba(232, 84, 84, 0.3);
+    }
+
+    .path-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .path-icon {
+      font-size: 2rem;
+    }
+
+    .path-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0;
+    }
+
+    .path-promise {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .path-problems {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .path-problems li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .problem-icon {
+      font-size: 1rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .path-verdict {
+      background: rgba(0,0,0,0.3);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-top: auto;
+    }
+
+    .path-pharma .path-verdict {
+      border-left: 3px solid var(--amber);
+    }
+
+    .path-underground .path-verdict {
+      border-left: 3px solid var(--danger);
+    }
+
+    .verdict-label {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .path-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .path-divider span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      padding: 16px;
+      background: var(--surface);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .third-path-resolution {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .resolution-arrow {
+      font-size: 2.5rem;
+      color: var(--teal);
+      margin-bottom: 24px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .resolution-box {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-elevated) 100%);
+      border: 2px solid var(--teal);
+      border-radius: 24px;
+      padding: 48px 40px;
+      position: relative;
+    }
+
+    .resolution-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--teal), var(--amber));
+      border-radius: 24px 24px 0 0;
+    }
+
+    .resolution-box h3 {
+      font-size: 1.75rem;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    .resolution-lead {
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .resolution-box p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .resolution-principle {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal);
+      border-radius: 100px;
+      padding: 16px 28px;
+      margin-top: 32px;
+    }
+
+    .principle-icon {
+      font-size: 1.25rem;
+    }
+
+    .principle-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--teal);
+      font-family: var(--font-mono);
+    }
+
+    @media (max-width: 900px) {
+      .paths-grid {
+        grid-template-columns: 1fr;
+      }
+      .path-divider {
+        padding: 16px 0;
+      }
+      .path-divider span {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+      }
     }
 
     /* Solution Section */
@@ -872,6 +1139,7 @@
       <div class="logo">VeriDose <span>by Certus Medical</span></div>
       <ul class="nav-links">
         <li><a href="#problem">The Problem</a></li>
+        <li><a href="#third-path">Third Path</a></li>
         <li><a href="#solution">The Solution</a></li>
         <li><a href="#how">How It Works</a></li>
         <li><a href="#licensing">Platform</a></li>
@@ -883,12 +1151,19 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="section-label">Certus Medical</div>
-    <h1>We made it possible for the government to <span class="highlight">trust patients</span> with medicines they couldn't trust them with before.</h1>
-    <p class="hero-tagline">If a patient proves who they are, proves the medicine is pure, and records every outcome—what justification is left to deny them relief?</p>
-    <div class="cta-group">
-      <a href="#solution" class="btn btn-primary">See How It Works</a>
-      <a href="#vision" class="btn btn-secondary">Our Vision</a>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="section-label">Certus Medical</div>
+        <h1>We're building a system regulators can <span class="highlight">trust</span>—so patients can get relief <span class="highlight">now</span> and generate <span class="highlight">evidence</span> that drives further <span class="highlight">access</span>.</h1>
+        <p class="hero-tagline">If a patient proves who they are, proves the medicine is pure, and records every outcome—what justification is left to deny them relief?</p>
+        <div class="cta-group">
+          <a href="#solution" class="btn btn-primary">See How It Works</a>
+          <a href="#vision" class="btn btn-secondary">Our Vision</a>
+        </div>
+      </div>
+      <div class="hero-device">
+        <img src="veridose_hero.png" alt="VeriDose Device - Precision DMT delivery system with biometric verification" class="hero-device-img">
+      </div>
     </div>
   </section>
 
@@ -949,10 +1224,69 @@
     </div>
   </section>
 
+  <!-- The Third Path Section -->
+  <section class="third-path" id="third-path">
+    <div class="section-label">Two Failed Paths</div>
+    <h2>Until now, patients had only two options—both broken.</h2>
+    
+    <div class="paths-grid">
+      <div class="path-card path-pharma">
+        <div class="path-header">
+          <div class="path-icon">🏥</div>
+          <h3>The Pharmaceutical Path</h3>
+        </div>
+        <p class="path-promise">Wait for FDA approval. Go to a clinic. Pay thousands. Hope insurance covers it.</p>
+        <ul class="path-problems">
+          <li><span class="problem-icon">⏳</span> 10-15 year approval timelines</li>
+          <li><span class="problem-icon">💰</span> $20,000+ per treatment course</li>
+          <li><span class="problem-icon">📍</span> Clinic visits during attacks</li>
+          <li><span class="problem-icon">🚫</span> No home access, no autonomy</li>
+        </ul>
+        <div class="path-verdict">
+          <span class="verdict-label">Result:</span> Relief exists but remains locked behind gatekeepers
+        </div>
+      </div>
+      
+      <div class="path-divider">
+        <span>OR</span>
+      </div>
+      
+      <div class="path-card path-underground">
+        <div class="path-header">
+          <div class="path-icon">🌑</div>
+          <h3>The Underground Path</h3>
+        </div>
+        <p class="path-promise">Find it yourself. Trust strangers. Hope for the best.</p>
+        <ul class="path-problems">
+          <li><span class="problem-icon">❓</span> Unknown purity and dose</li>
+          <li><span class="problem-icon">⚠️</span> No medical oversight</li>
+          <li><span class="problem-icon">⚖️</span> Legal risk and stigma</li>
+          <li><span class="problem-icon">📊</span> No data, no learning, no progress</li>
+        </ul>
+        <div class="path-verdict">
+          <span class="verdict-label">Result:</span> Patients become criminals for seeking relief
+        </div>
+      </div>
+    </div>
+
+    <div class="third-path-resolution">
+      <div class="resolution-arrow">↓</div>
+      <div class="resolution-box">
+        <h3>There is a Third Path</h3>
+        <p class="resolution-lead">What if the barrier isn't the substance—but the <em>uncertainty</em> around it?</p>
+        <p>Regulators don't prohibit because the molecule is dangerous. They prohibit because they can't verify who's using it, whether it's pure, or what happens after. <strong style="color: var(--teal);">Remove the uncertainty, and you remove the justification for prohibition.</strong></p>
+        <div class="resolution-principle">
+          <span class="principle-icon">🔑</span>
+          <span class="principle-text">Verification enables autonomy.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Solution Section -->
   <section class="solution" id="solution">
     <div class="section-label">The Solution</div>
-    <p class="solution-quote">"We built a system that lets them see everything."</p>
+    <p class="solution-quote">"Every patient verified. Every cartridge authenticated. Every dose tracked. Every outcome recorded."</p>
     
     <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 48px;">It confirms who the person is. It confirms the medicine is real and tested. It records every single use—when, how much, what happened. It's like saying to the government: <em>"You were worried you couldn't trust this. Here's proof you can."</em></p>
   </section>
@@ -997,7 +1331,7 @@
       <div class="section-label">The Ask</div>
       <h2>One device. One molecule. One condition. One new category.</h2>
       <p>We're not asking to break the rules. We're asking for a new rule: If someone can prove who they are, prove the medicine is safe, and show you exactly what happens—shouldn't they be allowed to stop suffering?</p>
-      <p class="tagline">Every patient verified. Every cartridge authenticated. Every dose tracked. Every outcome recorded.</p>
+      <p class="tagline">Licensed Autonomous Access. Trust through transparency. Access through accountability.</p>
     </div>
   </section>
 
@@ -1049,9 +1383,9 @@
     <div class="pilot-content">
       <div>
         <div class="section-label">Evidence First</div>
-        <h2>The medicine is legal in Mexico. So we start there.</h2>
+        <h2>In Mexico, the medicine exists in a regulatory grey zone—not explicitly legal, but tolerated. That's enough to start.</h2>
         <p class="lead" style="margin-bottom: 24px;">We're helping people there first, proving it works, and using that proof to change the law here.</p>
-        <p style="margin-bottom: 24px;">Rather than waiting years for US regulatory approval before generating evidence, we'll operate in a jurisdiction where it's legal—generating undeniable proof of concept.</p>
+        <p style="margin-bottom: 24px;">Rather than waiting years for US regulatory approval before generating evidence, we'll operate in a jurisdiction where therapeutic use isn't prosecuted—generating undeniable proof of concept.</p>
         <p style="color: var(--teal); font-weight: 500;">Evidence ends debates. Advocacy doesn't.</p>
       </div>
       <div class="pilot-phases">
